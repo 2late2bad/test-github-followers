@@ -15,6 +15,7 @@
 		2414328B2A4612EE00B50338 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414328A2A4612EE00B50338 /* FavoritesListVC.swift */; };
 		2414328D2A461CCC00B50338 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414328C2A461CCC00B50338 /* GFButton.swift */; };
 		2414328F2A461FAB00B50338 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414328E2A461FAB00B50338 /* GFTextField.swift */; };
+		241432912A462D6400B50338 /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241432902A462D6400B50338 /* FollowerListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2414328A2A4612EE00B50338 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 		2414328C2A461CCC00B50338 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		2414328E2A461FAB00B50338 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		241432902A462D6400B50338 /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				2414327F2A460CB400B50338 /* LaunchScreen.storyboard */,
 				241432822A460CB400B50338 /* Info.plist */,
 				241432882A4612C300B50338 /* SearchVC.swift */,
+				241432902A462D6400B50338 /* FollowerListVC.swift */,
 				2414328A2A4612EE00B50338 /* FavoritesListVC.swift */,
 				2414328C2A461CCC00B50338 /* GFButton.swift */,
 				2414328E2A461FAB00B50338 /* GFTextField.swift */,
@@ -147,6 +150,7 @@
 				2414328B2A4612EE00B50338 /* FavoritesListVC.swift in Sources */,
 				2414328D2A461CCC00B50338 /* GFButton.swift in Sources */,
 				241432892A4612C300B50338 /* SearchVC.swift in Sources */,
+				241432912A462D6400B50338 /* FollowerListVC.swift in Sources */,
 				241432752A460CB300B50338 /* AppDelegate.swift in Sources */,
 				241432772A460CB300B50338 /* SceneDelegate.swift in Sources */,
 			);
