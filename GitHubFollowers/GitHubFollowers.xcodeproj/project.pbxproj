@@ -70,22 +70,62 @@
 		241432732A460CB300B50338 /* GitHubFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				241432742A460CB300B50338 /* AppDelegate.swift */,
-				241432762A460CB300B50338 /* SceneDelegate.swift */,
-				2414327D2A460CB400B50338 /* Assets.xcassets */,
-				2414327F2A460CB400B50338 /* LaunchScreen.storyboard */,
-				241432822A460CB400B50338 /* Info.plist */,
+				24C95E3C2A49A40C00BB80D1 /* Application */,
+				24C95E382A49A30800BB80D1 /* Screen */,
+				24C95E392A49A34700BB80D1 /* Custom View */,
+				24C95E3A2A49A38C00BB80D1 /* Extension */,
+				24C95E3B2A49A3F900BB80D1 /* Support */,
+			);
+			path = GitHubFollowers;
+			sourceTree = "<group>";
+		};
+		24C95E382A49A30800BB80D1 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
 				241432882A4612C300B50338 /* SearchVC.swift */,
-				241432902A462D6400B50338 /* FollowerListVC.swift */,
 				2414328A2A4612EE00B50338 /* FavoritesListVC.swift */,
+				241432902A462D6400B50338 /* FollowerListVC.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		24C95E392A49A34700BB80D1 /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				241432962A46373B00B50338 /* GFAlertVC.swift */,
 				2414328C2A461CCC00B50338 /* GFButton.swift */,
 				2414328E2A461FAB00B50338 /* GFTextField.swift */,
 				241432922A4634F800B50338 /* GFTitleLabel.swift */,
 				241432942A46364400B50338 /* GFBodyLabel.swift */,
-				241432962A46373B00B50338 /* GFAlertVC.swift */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		24C95E3A2A49A38C00BB80D1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
 				24C95E362A499EE900BB80D1 /* UIViewController+Ext.swift */,
 			);
-			path = GitHubFollowers;
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		24C95E3B2A49A3F900BB80D1 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				2414327D2A460CB400B50338 /* Assets.xcassets */,
+				2414327F2A460CB400B50338 /* LaunchScreen.storyboard */,
+				241432822A460CB400B50338 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		24C95E3C2A49A40C00BB80D1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				241432742A460CB300B50338 /* AppDelegate.swift */,
+				241432762A460CB300B50338 /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XY95NKW6BH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GitHubFollowers/Info.plist;
+				INFOPLIST_FILE = GitHubFollowers/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -341,7 +381,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XY95NKW6BH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GitHubFollowers/Info.plist;
+				INFOPLIST_FILE = GitHubFollowers/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
