@@ -26,6 +26,7 @@
 		24C95E472A49D24400BB80D1 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C95E462A49D24400BB80D1 /* ErrorMessage.swift */; };
 		24C95E4A2A49D98B00BB80D1 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C95E492A49D98B00BB80D1 /* FollowerCell.swift */; };
 		24C95E4C2A49DA0E00BB80D1 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C95E4B2A49DA0E00BB80D1 /* GFAvatarImageView.swift */; };
+		24C95E4E2A4A3A7B00BB80D1 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C95E4D2A4A3A7B00BB80D1 /* UIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		24C95E462A49D24400BB80D1 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		24C95E492A49D98B00BB80D1 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		24C95E4B2A49DA0E00BB80D1 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
+		24C95E4D2A4A3A7B00BB80D1 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				24C95E462A49D24400BB80D1 /* ErrorMessage.swift */,
+				24C95E4D2A4A3A7B00BB80D1 /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				2414328B2A4612EE00B50338 /* FavoritesListVC.swift in Sources */,
 				2414328D2A461CCC00B50338 /* GFButton.swift in Sources */,
 				24C95E372A499EE900BB80D1 /* UIViewController+Ext.swift in Sources */,
+				24C95E4E2A4A3A7B00BB80D1 /* UIHelper.swift in Sources */,
 				24C95E4C2A49DA0E00BB80D1 /* GFAvatarImageView.swift in Sources */,
 				241432892A4612C300B50338 /* SearchVC.swift in Sources */,
 				241432972A46373B00B50338 /* GFAlertVC.swift in Sources */,
