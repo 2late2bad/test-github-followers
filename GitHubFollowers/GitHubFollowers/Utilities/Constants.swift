@@ -18,4 +18,9 @@ enum Constants {
         static let followers = "heart"
         static let following = "person.2"
     }
+    
+    enum DateFormat {
+        static let server = "yyyy-MM-dd'T'HH:mm:ssZ"
+        static let monthYear = "MMMM yyyy"
+    }
 }
