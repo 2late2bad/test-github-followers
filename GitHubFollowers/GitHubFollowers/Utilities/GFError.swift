@@ -1,8 +1,8 @@
 //
-//  ErrorMessage.swift
+//  GFError.swift
 //  GitHubFollowers
 //
-//  Created by Alexander Vagin on 26.06.2023.
+//  Created by Alexander Vagin on 27.06.2023.
 //
 
 import Foundation
