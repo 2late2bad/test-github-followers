@@ -39,6 +39,7 @@
 		24C95E4C2A49DA0E00BB80D1 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C95E4B2A49DA0E00BB80D1 /* GFAvatarImageView.swift */; };
 		24C95E4E2A4A3A7B00BB80D1 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C95E4D2A4A3A7B00BB80D1 /* UIHelper.swift */; };
 		24FB95C42A4C4AA700F13B72 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB95C32A4C4AA700F13B72 /* PersistenceManager.swift */; };
+		24FB95C62A4C565200F13B72 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB95C52A4C565200F13B72 /* FavoriteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		24C95E4B2A49DA0E00BB80D1 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		24C95E4D2A4A3A7B00BB80D1 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		24FB95C32A4C4AA700F13B72 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		24FB95C52A4C565200F13B72 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				24C95E492A49D98B00BB80D1 /* FollowerCell.swift */,
+				24FB95C52A4C565200F13B72 /* FavoriteCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				2480B7542A4B244800355052 /* GFError.swift in Sources */,
 				2480B7622A4B733200355052 /* GFFollowerItemVC.swift in Sources */,
 				2480B75C2A4B488B00355052 /* GFItemInfoView.swift in Sources */,
+				24FB95C62A4C565200F13B72 /* FavoriteCell.swift in Sources */,
 				241432972A46373B00B50338 /* GFAlertVC.swift in Sources */,
 				24C95E4A2A49D98B00BB80D1 /* FollowerCell.swift in Sources */,
 				2480B7562A4B298D00355052 /* GFUserInfoHeaderVC.swift in Sources */,
