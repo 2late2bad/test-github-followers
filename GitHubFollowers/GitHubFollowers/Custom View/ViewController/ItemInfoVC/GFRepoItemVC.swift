@@ -13,6 +13,10 @@ class GFRepoItemVC: GFItemInfoVC {
         super.viewDidLoad()
         configureItems()
     }
+    
+    override func actionButtonTapped() {
+        delegate.didTapGitHubProfile(for: user)
+    }
 }
 
 private extension GFRepoItemVC {

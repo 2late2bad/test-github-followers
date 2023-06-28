@@ -13,6 +13,10 @@ class GFFollowerItemVC: GFItemInfoVC {
         super.viewDidLoad()
         configureItems()
     }
+    
+    override func actionButtonTapped() {
+        delegate.didTapGetFollowers(for: user)
+    }
 }
 
 private extension GFFollowerItemVC {
