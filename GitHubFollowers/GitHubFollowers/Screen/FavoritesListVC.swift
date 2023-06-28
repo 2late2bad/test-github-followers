@@ -47,7 +47,7 @@ class FavoritesListVC: UIViewController {
             switch result {
             case .success(let favorites):
                 if favorites.isEmpty {
-                    self.showEmptyStateView(with: "Нет избранных 💔\nДобавьте хотя бы одного пользователя в избранное",
+                    self.showEmptyStateView(with: "Нет избранных 💔\nДобавьте хотя бы одного пользователя в Избранное",
                                        in: self.view)
                 } else {
                     self.favorites = favorites
@@ -81,9 +81,7 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let favorite = favorites[indexPath.row]
-        let destVC = FollowerListVC()
-        destVC.username = favorite.login
-        destVC.title = favorite.login
+        let destVC = FollowerListVC(username: favorite.login)
         
         navigationController?.pushViewController(destVC, animated: true)
     }
