@@ -9,17 +9,23 @@ import Foundation
 
 extension String {
     
-    func convertToDate() -> Date? {
-        let dateFormatter        = DateFormatter()
-        dateFormatter.dateFormat = C.DateFormat.server
-        dateFormatter.locale     = Locale(identifier: "en_US_POSIX")
-        dateFormatter.timeZone   = .current
-        
-        return dateFormatter.date(from: self)
-    }
+    // Можем опустить нижеследующие методы, если вводим в network manager:
+    // decoder.dateDecodingStrategy = .iso8601
     
-    func convertToDisplayFormat() -> String {
-        guard let date = self.convertToDate() else { return "N/A" }
-        return date.convertToMonthYearFormat()
-    }
+    // А также указываем в модели данных User вместо String дату:
+    // let createdAt: Date
+    
+//    func convertToDate() -> Date? {
+//        let dateFormatter        = DateFormatter()
+//        dateFormatter.dateFormat = C.DateFormat.server
+//        dateFormatter.locale     = Locale(identifier: "en_US_POSIX")
+//        dateFormatter.timeZone   = .current
+//        
+//        return dateFormatter.date(from: self)
+//    }
+//    
+//    func convertToDisplayFormat() -> String {
+//        guard let date = self.convertToDate() else { return "N/A" }
+//        return date.convertToMonthYearFormat()
+//    }
 }
