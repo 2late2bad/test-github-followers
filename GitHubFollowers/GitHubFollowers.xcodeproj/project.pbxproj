@@ -31,6 +31,7 @@
 		2480B7622A4B733200355052 /* GFFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480B7612A4B733200355052 /* GFFollowerItemVC.swift */; };
 		2480B7652A4B77C500355052 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480B7642A4B77C500355052 /* Date+Ext.swift */; };
 		2480B7672A4B786300355052 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480B7662A4B786300355052 /* String+Ext.swift */; };
+		2481CBA62A4D84690025BA54 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481CBA52A4D84690025BA54 /* UIView+Ext.swift */; };
 		24C95E372A499EE900BB80D1 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C95E362A499EE900BB80D1 /* UIViewController+Ext.swift */; };
 		24C95E3F2A49AAEF00BB80D1 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C95E3E2A49AAEF00BB80D1 /* Follower.swift */; };
 		24C95E412A49ABB800BB80D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C95E402A49ABB800BB80D1 /* User.swift */; };
@@ -72,6 +73,7 @@
 		2480B7612A4B733200355052 /* GFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemVC.swift; sourceTree = "<group>"; };
 		2480B7642A4B77C500355052 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		2480B7662A4B786300355052 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		2481CBA52A4D84690025BA54 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		24C95E362A499EE900BB80D1 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		24C95E3E2A49AAEF00BB80D1 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		24C95E402A49ABB800BB80D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -208,12 +210,12 @@
 			isa = PBXGroup;
 			children = (
 				24FB95C72A4C646B00F13B72 /* TabBarController */,
-				2480B74E2A4AE39100355052 /* Label */,
 				2480B74D2A4AE37300355052 /* ViewController */,
+				2480B7492A4AE35300355052 /* View */,
+				2480B74E2A4AE39100355052 /* Label */,
 				2480B74C2A4AE36C00355052 /* ImageView */,
 				2480B74B2A4AE36400355052 /* TextField */,
 				2480B74A2A4AE36000355052 /* Button */,
-				2480B7492A4AE35300355052 /* View */,
 				24C95E482A49D96900BB80D1 /* Cell */,
 			);
 			path = "Custom View";
@@ -225,6 +227,7 @@
 				24C95E362A499EE900BB80D1 /* UIViewController+Ext.swift */,
 				2480B7642A4B77C500355052 /* Date+Ext.swift */,
 				2480B7662A4B786300355052 /* String+Ext.swift */,
+				2481CBA52A4D84690025BA54 /* UIView+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				241432912A462D6400B50338 /* FollowerListVC.swift in Sources */,
 				241432752A460CB300B50338 /* AppDelegate.swift in Sources */,
 				241432772A460CB300B50338 /* SceneDelegate.swift in Sources */,
+				2481CBA62A4D84690025BA54 /* UIView+Ext.swift in Sources */,
 				2480B7602A4B713E00355052 /* GFRepoItemVC.swift in Sources */,
 				2480B7522A4B197600355052 /* UserInfoVC.swift in Sources */,
 			);
