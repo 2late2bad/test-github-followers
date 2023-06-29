@@ -7,11 +7,12 @@
 
 import UIKit
 
-class FavoriteCell: UITableViewCell {
+final class FavoriteCell: UITableViewCell {
 
     static let reuseID  = "FavoriteCell"
     let avatarImageView = GFAvatarImageView(frame: .zero)
     let usernameLabel   = GFTitleLabel(textAlignment: .left, fontSize: 26)
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -23,20 +24,18 @@ class FavoriteCell: UITableViewCell {
     }
     
     func set(favorite: Follower) {
+        avatarImageView.downloadImage(fromURL: favorite.avatarUrl)
         usernameLabel.text = favorite.login
-        NetworkManager.shared.downloadImage(from: favorite.avatarUrl) { [weak self] image in
-            guard let self = self else { return }
-            DispatchQueue.main.async { self.avatarImageView.image = image }
-        }
     }
+}
+
+private extension FavoriteCell {
     
-    private func configure() {
-        addSubview(avatarImageView)
-        addSubview(usernameLabel)
+    func configure() {
+        addSubviews(avatarImageView, usernameLabel)
         accessoryType = .disclosureIndicator
         
         let padding: CGFloat = 12
-        
         NSLayoutConstraint.activate([
             avatarImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             avatarImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: padding),

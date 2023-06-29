@@ -7,11 +7,11 @@
 
 import UIKit
 
-class GFAvatarImageView: UIImageView {
+final class GFAvatarImageView: UIImageView {
     
     let cache            = NetworkManager.shared.cache
     let placeholderImage = C.Images.placeholderAvatar
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -21,7 +21,17 @@ class GFAvatarImageView: UIImageView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func configure() {
+    func downloadImage(fromURL url: String) {
+        NetworkManager.shared.downloadImage(from: url) { [weak self] image in
+            guard let self = self else { return }
+            DispatchQueue.main.async { self.image = image }
+        }
+    }
+}
+
+private extension GFAvatarImageView {
+    
+    func configure() {
         layer.cornerRadius = 10
         clipsToBounds      = true
         image              = placeholderImage

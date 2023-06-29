@@ -7,18 +7,19 @@
 
 import UIKit
 
-class GFAlertVC: UIViewController {
+final class GFAlertVC: UIViewController {
     
     let containerView = GFAlertContainerView()
     let titleLabel    = GFTitleLabel(textAlignment: .center, fontSize: 20)
     let messageLabel  = GFBodyLabel(textAlignment: .center)
     let actionButton  = GFButton(backgroundColor: .systemPink, title: "OK")
-    
+
     var alertTitle: String?
     var message: String?
     var buttonTitle: String?
     
     let padding: CGFloat = 20
+    
     
     init(title: String, message: String, buttonTitle: String) {
         super.init(nibName: nil, bundle: nil)
@@ -39,6 +40,13 @@ class GFAlertVC: UIViewController {
         configureActionButton()
         configureMessageLabel()
     }
+
+    @objc func dismissVC() {
+        dismiss(animated: true)
+    }
+}
+
+private extension GFAlertVC {
     
     func configureContainerView() {
         view.addSubview(containerView)
@@ -87,9 +95,5 @@ class GFAlertVC: UIViewController {
             messageLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
             messageLabel.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -12)
         ])
-    }
-    
-    @objc func dismissVC() {
-        dismiss(animated: true)
     }
 }

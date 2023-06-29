@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoritesListVC: GFDataLoadingVC {
+final class FavoritesListVC: GFDataLoadingVC {
     
     let tableView             = UITableView()
     var favorites: [Follower] = []
@@ -22,6 +22,9 @@ class FavoritesListVC: GFDataLoadingVC {
         super.viewWillAppear(animated)
         getFavorites()
     }
+}
+
+private extension FavoritesListVC {
     
     func configureVC() {
         view.backgroundColor = .systemBackground
@@ -47,21 +50,25 @@ class FavoritesListVC: GFDataLoadingVC {
             
             switch result {
             case .success(let favorites):
-                if favorites.isEmpty {
-                    self.showEmptyStateView(with: "Нет избранных 💔\nДобавьте хотя бы одного пользователя в Избранное",
-                                            in: self.view)
-                } else {
-                    self.favorites = favorites
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                        self.view.bringSubviewToFront(self.tableView)
-                    }
-                }
+                self.updateUI(with: favorites)
                 
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Что-то пошло не так",
                                                 message: error.rawValue,
                                                 buttonTitle: "OK")
+            }
+        }
+    }
+    
+    func updateUI(with favorites: [Follower]) {
+        if favorites.isEmpty {
+            self.showEmptyStateView(with: "Нет избранных 💔\nДобавьте хотя бы одного пользователя в Избранное",
+                                    in: self.view)
+        } else {
+            self.favorites = favorites
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.view.bringSubviewToFront(self.tableView)
             }
         }
     }

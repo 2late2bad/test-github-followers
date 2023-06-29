@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GFTitleLabel: UILabel {
+final class GFTitleLabel: UILabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,8 +23,11 @@ class GFTitleLabel: UILabel {
         self.textAlignment = textAlignment
         self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
     }
+}
+
+private extension GFTitleLabel {
     
-    private func configure() {
+    func configure() {
         textColor                 = .label
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor        = 0.9

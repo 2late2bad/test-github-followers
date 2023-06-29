@@ -7,8 +7,8 @@
 
 import UIKit
 
-class GFButton: UIButton {
-
+final class GFButton: UIButton {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -24,15 +24,18 @@ class GFButton: UIButton {
         self.setTitle(title, for: .normal)
     }
     
-    private func configure() {
-        layer.cornerRadius    = 10
-        setTitleColor(.white, for: .normal)
-        titleLabel?.font      = UIFont.preferredFont(forTextStyle: .headline)
-        translatesAutoresizingMaskIntoConstraints = false
-    }
-    
     func set(backgroundColor: UIColor, title: String) {
         self.backgroundColor = backgroundColor
         setTitle(title, for: .normal)
+    }
+}
+
+private extension GFButton {
+    
+    func configure() {
+        layer.cornerRadius = 10
+        titleLabel?.font   = UIFont.preferredFont(forTextStyle: .headline)
+        setTitleColor(.white, for: .normal)
+        translatesAutoresizingMaskIntoConstraints = false
     }
 }

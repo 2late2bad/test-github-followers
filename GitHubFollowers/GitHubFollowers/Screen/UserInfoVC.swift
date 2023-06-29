@@ -11,10 +11,10 @@ protocol UserInfoVCDelegate: AnyObject {
     func didRequestFollowers(for username: String)
 }
 
-class UserInfoVC: GFDataLoadingVC {
+final class UserInfoVC: GFDataLoadingVC {
     
-    let scrollView = UIScrollView()
-    let contentView = UIView()
+    let scrollView          = UIScrollView()
+    let contentView         = UIView()
     
     let headerView          = UIView()
     let itemViewOne         = UIView()
@@ -61,6 +61,7 @@ private extension UserInfoVC {
             switch result {
             case .success(let user):
                 DispatchQueue.main.async { self.configureUIElements(with: user) }
+                
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Что-то пошло не так",
                                                 message: error.rawValue,

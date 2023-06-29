@@ -11,11 +11,12 @@ enum ItemInfoType {
     case repos, gists, followers, following
 }
 
-class GFItemInfoView: UIView {
+final class GFItemInfoView: UIView {
     
     let symbolImageView = UIImageView()
     let titleLabel      = GFTitleLabel(textAlignment: .left, fontSize: 14)
     let countLabel      = GFTitleLabel(textAlignment: .center, fontSize: 14)
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,7 +27,29 @@ class GFItemInfoView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func configure() {
+    func set(_ itemInfoType: ItemInfoType, with count: Int) {
+        switch itemInfoType {
+        case .repos:
+            symbolImageView.image = C.SFSymbols.repos
+            titleLabel.text = "Public Repos"
+        case .gists:
+            symbolImageView.image = C.SFSymbols.gists
+            titleLabel.text = "Public Gists"
+        case .followers:
+            symbolImageView.image = C.SFSymbols.followers
+            titleLabel.text = "Followers"
+        case .following:
+            symbolImageView.image = C.SFSymbols.following
+            titleLabel.text = "Following"
+        }
+        
+        countLabel.text = String(count)
+    }
+}
+
+private extension GFItemInfoView {
+    
+    func configure() {
         addSubview(symbolImageView)
         addSubview(titleLabel)
         addSubview(countLabel)
@@ -51,24 +74,5 @@ class GFItemInfoView: UIView {
             countLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             countLabel.heightAnchor.constraint(equalToConstant: 18)
         ])
-    }
-    
-    func set(_ itemInfoType: ItemInfoType, with count: Int) {
-        switch itemInfoType {
-        case .repos:
-            symbolImageView.image = C.SFSymbols.repos
-            titleLabel.text = "Public Repos"
-        case .gists:
-            symbolImageView.image = C.SFSymbols.gists
-            titleLabel.text = "Public Gists"
-        case .followers:
-            symbolImageView.image = C.SFSymbols.followers
-            titleLabel.text = "Followers"
-        case .following:
-            symbolImageView.image = C.SFSymbols.following
-            titleLabel.text = "Following"
-        }
-        
-        countLabel.text = String(count)
     }
 }

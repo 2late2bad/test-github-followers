@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GFBodyLabel: UILabel {
+final class GFBodyLabel: UILabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,8 +22,11 @@ class GFBodyLabel: UILabel {
         self.init(frame: .zero)
         self.textAlignment = textAlignment
     }
+}
+
+private extension GFBodyLabel {
     
-    private func configure() {
+    func configure() {
         textColor                         = .secondaryLabel
         font                              = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontForContentSizeCategory = true

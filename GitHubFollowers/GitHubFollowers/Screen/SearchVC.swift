@@ -7,14 +7,14 @@
 
 import UIKit
 
-class SearchVC: UIViewController {
+final class SearchVC: UIViewController {
     
-    let logoImageView = UIImageView()
-    let usernameTextField = GFTextField()
+    let logoImageView      = UIImageView()
+    let usernameTextField  = GFTextField()
     let callToActionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
-    var logoImageViewTopConstraint: NSLayoutConstraint!
     
     var isUsernameEntered: Bool { !usernameTextField.text!.isEmpty }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,24 +30,13 @@ class SearchVC: UIViewController {
         usernameTextField.text = ""
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
+}
+
+private extension SearchVC {
     
     func createDismissKeyboardTapGesture() {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
-    }
-    
-    @objc func pushFollowerListVC() {
-        guard isUsernameEntered else {
-            presentGFAlertOnMainThread(title: "Empty Username",
-                                       message: "Пожалуйста, введите имя пользователя. Нам нужно знать, кого искать 🗿",
-                                       buttonTitle: "OK")
-            return
-        }
-        
-        usernameTextField.resignFirstResponder()
-        
-        let followerListVC = FollowerListVC(username: usernameTextField.text!)
-        navigationController?.pushViewController(followerListVC, animated: true)
     }
     
     func configureLogoImageView() {
@@ -56,11 +45,10 @@ class SearchVC: UIViewController {
         logoImageView.image = C.Images.ghLogo
         
         let topConstraintsConstant: CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? 20 : 80
-        logoImageViewTopConstraint = logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
-                                                                        constant: topConstraintsConstant)
-        logoImageViewTopConstraint.isActive = true
         
         NSLayoutConstraint.activate([
+            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
+                                               constant: topConstraintsConstant),
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.heightAnchor.constraint(equalToConstant: 200),
             logoImageView.widthAnchor.constraint(equalToConstant: 200)
@@ -90,9 +78,24 @@ class SearchVC: UIViewController {
             callToActionButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
+    
+    @objc func pushFollowerListVC() {
+        guard isUsernameEntered else {
+            presentGFAlertOnMainThread(title: "Empty Username",
+                                       message: "Пожалуйста, введите имя пользователя. Нам нужно знать, кого искать 🗿",
+                                       buttonTitle: "OK")
+            return
+        }
+        
+        usernameTextField.resignFirstResponder()
+        
+        let followerListVC = FollowerListVC(username: usernameTextField.text!)
+        navigationController?.pushViewController(followerListVC, animated: true)
+    }
 }
 
 extension SearchVC: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         pushFollowerListVC()
         return true

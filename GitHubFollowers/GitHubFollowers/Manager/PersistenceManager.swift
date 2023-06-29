@@ -7,17 +7,12 @@
 
 import Foundation
 
-enum PersistenceActionType {
-    case add, remove
-}
+enum PersistenceActionType { case add, remove }
 
 enum PersistenceManager {
     
     static private let defaults = UserDefaults.standard
-    
-    enum Keys {
-        static let favorites = "favorites"
-    }
+    enum Keys { static let favorites = "favorites" }
     
     static func updateWith(favorite: Follower,
                            actionType: PersistenceActionType,
