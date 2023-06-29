@@ -12,11 +12,11 @@ typealias C = Constants
 enum Constants {
     
     enum SFSymbols {
-        static let location  = "mappin.and.ellipse"
-        static let repos     = "folder"
-        static let gists     = "text.alignleft"
-        static let followers = "heart"
-        static let following = "person.2"
+        static let location  = UIImage(systemName: "mappin.and.ellipse")
+        static let repos     = UIImage(systemName: "folder")
+        static let gists     = UIImage(systemName: "text.alignleft")
+        static let followers = UIImage(systemName: "heart")
+        static let following = UIImage(systemName: "person.2")
     }
     
     enum Images {
@@ -26,7 +26,7 @@ enum Constants {
     }
     
     enum DateFormat {
-        static let server = "yyyy-MM-dd'T'HH:mm:ssZ"
+        static let server    = "yyyy-MM-dd'T'HH:mm:ssZ"
         static let monthYear = "MMMM yyyy"
     }
 }
