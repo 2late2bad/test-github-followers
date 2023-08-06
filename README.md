@@ -5,8 +5,8 @@
 - Добавить любимых подписчиков в избранное (с возможностью удаления)
 
 ![iOS](https://img.shields.io/badge/iOS-14+%20-white?logo=Apple&logoColor=white)
-![Swift](https://img.shields.io/badge/Swift-5-B71C1C?logo=Swift&logoColor=red)
-![Xcode](https://img.shields.io/badge/Xcode-14%20-00B2FF?logo=Xcode&logoColor=00B2FF)
+![Swift](https://img.shields.io/badge/Swift-5.5-red?logo=Swift&logoColor=red)
+![Xcode](https://img.shields.io/badge/Xcode-14.3%20-00B2FF?logo=Xcode&logoColor=00B2FF)
 
 ## Preview
 Экраны приложения:
@@ -16,6 +16,7 @@
 
 ## Tech stack
 * UIKit
+* MVC
 * GCD
 * URLSession
 * UserDefaults
@@ -30,12 +31,12 @@
 * Без использования сторонних библиотек
 
 ## Screenshots
-<img src="https://github.com/2late2bad/test-github-followers/assets/121951550/ed478ea1-948f-4423-a215-37f9bee56fb3" width="220" height="420">
-<img src="https://github.com/2late2bad/test-github-followers/assets/121951550/c43aee4b-a26f-420f-b5ba-555bf6e52ce5" width="220" height="420">
-<img src="https://github.com/2late2bad/test-github-followers/assets/121951550/e4ae3e00-7676-4bae-97fa-5933ab1983e0" width="220" height="420">
-<img src="https://github.com/2late2bad/test-github-followers/assets/121951550/d72f8ec6-da88-4d71-b975-32fc33ec4e53" width="220" height="420">
-<img src="https://github.com/2late2bad/test-github-followers/assets/121951550/3eb933a6-d868-451a-a34b-f1c446f42bd9" width="220" height="420">
-<img src="https://github.com/2late2bad/test-github-followers/assets/121951550/a5bc3cc0-0f4b-4ea5-ab51-d69ff475fe89" width="220" height="420">
+<img src="https://github.com/2late2bad/test-github-followers/assets/121951550/ed478ea1-948f-4423-a215-37f9bee56fb3" width="220" height="460">
+<img src="https://github.com/2late2bad/test-github-followers/assets/121951550/c43aee4b-a26f-420f-b5ba-555bf6e52ce5" width="220" height="460">
+<img src="https://github.com/2late2bad/test-github-followers/assets/121951550/e4ae3e00-7676-4bae-97fa-5933ab1983e0" width="220" height="460">
+<img src="https://github.com/2late2bad/test-github-followers/assets/121951550/d72f8ec6-da88-4d71-b975-32fc33ec4e53" width="220" height="460">
+<img src="https://github.com/2late2bad/test-github-followers/assets/121951550/3eb933a6-d868-451a-a34b-f1c446f42bd9" width="220" height="460">
+<img src="https://github.com/2late2bad/test-github-followers/assets/121951550/a5bc3cc0-0f4b-4ea5-ab51-d69ff475fe89" width="220" height="460">
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
