@@ -33,7 +33,7 @@
 
 ## Tech stack
 * UIKit
-* MVC
+* Clean MVC
 * GCD
 * URLSession
 * UserDefaults
